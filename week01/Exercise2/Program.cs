@@ -44,7 +44,7 @@ class Program
                 {
                     Sign = "+";
                 }
-            else if (percentage%10 < 3 && letter != "F")
+            else if (percentage%10 < 3 && letter != "F"  && percentage != 100)
                 {
                     Sign = "-";
                 }
