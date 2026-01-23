@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection.Metadata;
-
+// To exceed the requirement, I have included a code to keep count of the entry in each journal file.
 class Program
 {
     static void Main(string[] args)
@@ -15,15 +15,15 @@ class Program
             Console.WriteLine("Please select one of the following choices, by typing the corresponding item number.");
             Console.WriteLine("1. Write");
             Console.WriteLine("2. Display");
-            Console.WriteLine("3. Load");
-            Console.WriteLine("4. Save");
+            Console.WriteLine("3. Save");
+            Console.WriteLine("4. Load");
             Console.WriteLine("5. Quit");
             
             Console.Write("What would you like to do? ");
             string userResponse = Console.ReadLine();
             int choice = int.Parse(userResponse);
 
-            // string randomPrompt = "";
+            string randomPrompt = "";
 
             if (choice == 1)
             {
@@ -37,7 +37,7 @@ class Program
              };
 
                 PromptGenerator generator = new PromptGenerator(prompts);
-                string randomPrompt = generator.GetRandomPrompt();
+                randomPrompt = generator.GetRandomPrompt();
                 Console.WriteLine($"{randomPrompt} ");
                 string promptResponse = Console.ReadLine();
 
@@ -48,6 +48,9 @@ class Program
                 newEntry. _promptText = randomPrompt;
                 newEntry. _entryText = promptResponse;
                 myJournal.AddEntry(newEntry);
+
+                int totalEntries = myJournal.GetEntryCount();
+                Console.WriteLine($"Cummulative entry No.: {totalEntries}");
             }
 
             else if (choice == 2)
@@ -66,7 +69,7 @@ class Program
             {
                 Console.Write("What is the file name to load? ");
                 string file = Console.ReadLine();
-                myJournal.LoadFromFile(file); 
+                myJournal.LoadFromFile(file);
             }
 
             else if (choice == 5)
