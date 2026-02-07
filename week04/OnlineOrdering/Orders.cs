@@ -26,12 +26,12 @@ public class Orders
             }
         }
         totalPrice += shippingCost;
-        Console.WriteLine($"Total Price: {totalPrice}");
+        Console.WriteLine($"Total Price: ${totalPrice}");
         }
 
         public void PackageLabel()
         {
-        Console.WriteLine("PackageLabel:");
+        Console.WriteLine("Package Label:");
         foreach (var product in _products)
             {
                 Console.Write(product.GetProductName()) ;
@@ -41,6 +41,7 @@ public class Orders
 
         public void ShippingLabel()
         {
+            Console.WriteLine("Shipping Label:");
             _customer.DisplayCustomerInfo();
             // Console.WriteLine("Shipping Label:");
             // foreach (var product in _products)
