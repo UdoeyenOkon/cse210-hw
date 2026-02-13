@@ -25,7 +25,7 @@ public class Customer
         Console.WriteLine($"Customer's Address: {_address}.");
     }
 
-    public void CustomerLiveInUSA()
+    public void CustomerLiveInUsa()
     {
         if (_address.GetCountry() == "USA")
         {
@@ -39,7 +39,7 @@ public class Customer
 
     public int GetShippingCost()
     {
-        return _address.LiveInUSA();
+        return _address.LiveInUsa();
     }
 
 }

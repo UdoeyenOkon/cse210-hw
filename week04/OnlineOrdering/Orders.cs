@@ -51,11 +51,11 @@ public class Orders
             
         //     }
         }
-        public void CustomerLiveInUSA()
+        public void CustomerLiveInUsa()
         {
             if (_customer != null)
             {
-                _customer.CustomerLiveInUSA();
+                _customer.CustomerLiveInUsa();
             }
         }
 

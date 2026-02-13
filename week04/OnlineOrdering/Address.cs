@@ -25,7 +25,7 @@ public class Address
         return $"{_streetAddress}, {_city}, {_state}, {_country}";
     }
 
-    public int LiveInUSA()
+    public int LiveInUsa()
     {
         if (_country.ToUpper() == "USA")
         {

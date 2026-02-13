@@ -32,7 +32,7 @@ class Program
             order.PackageLabel();
             order.ShippingLabel();
             order.TotalPrice();
-            order.CustomerLiveInUSA();
+            order.CustomerLiveInUsa();
             Console.WriteLine();            
         }
 
