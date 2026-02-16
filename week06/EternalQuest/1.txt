@@ -1,0 +1,4 @@
+1350
+SimpleGoal|Give talk|Accepts talk asssignment is a meeting|250|True
+EternalGoal|Read scriptures|Read for at least 10 minutes a day|100
+ChecklistGoal|Chapel cleaning|Clean the chapel every Saturday|50|10|10|300
